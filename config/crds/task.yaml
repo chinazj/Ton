@@ -1,0 +1,35 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  # metadata.name的内容是由"复数名.分组名"构成，如下，lines，ton.kubesphere.io是分组名
+  name: line.ton.k8s.io
+spec:
+  # 分组名，在REST API中也会用到的，格式是: /apis/分组名/CRD版本
+  group: ton.k8s.io
+  # list of versions supported by this CustomResourceDefinition
+  versions:
+    - name: v1alpha1
+      # 是否有效的开关.
+      served: true
+      # 只有一个版本能被标注为storage
+      storage: true
+  # 范围是属于namespace的
+  scope: Namespaced
+  names:
+    # 复数名
+    plural: lines
+    # 类型名
+    kind: Line
+  additionalPrinterColumns:
+    - name: Succeeded
+      type: string
+      JSONPath: ".status.conditions[?(@.type==\"Succeeded\")].status"
+    - name: Reason
+      type: string
+      JSONPath: ".status.conditions[?(@.type==\"Succeeded\")].reason"
+    - name: StartTime
+      type: date
+      JSONPath: .status.startTime
+    - name: CompletionTime
+      type: date
+      JSONPath: .status.completionTime
