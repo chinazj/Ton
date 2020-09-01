@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60867704-f1b6-44fc-a2e0-6703fc4338cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example/example.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hack/gobuild.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/line/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/flow/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/crds/task.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/crds/task.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hack/gengrate-client.sh" beforeDir="false" afterPath="$PROJECT_DIR$/hack/gengrate-client.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/apis/ton/v1alpha1/ton_types.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/apis/ton/v1alpha1/ton_types.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/apis/ton/v1alpha1/zz_generated.deepcopy.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/apis/ton/v1alpha1/zz_generated.deepcopy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/clientset/versioned/typed/ton/v1alpha1/fake/fake_line.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/clientset/versioned/typed/ton/v1alpha1/fake/fake_ton_client.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/client/clientset/versioned/typed/ton/v1alpha1/fake/fake_ton_client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/clientset/versioned/typed/ton/v1alpha1/generated_expansion.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/client/clientset/versioned/typed/ton/v1alpha1/generated_expansion.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/clientset/versioned/typed/ton/v1alpha1/line.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/clientset/versioned/typed/ton/v1alpha1/ton_client.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/client/clientset/versioned/typed/ton/v1alpha1/ton_client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/informers/externalversions/generic.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/client/informers/externalversions/generic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/informers/externalversions/ton/v1alpha1/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/client/informers/externalversions/ton/v1alpha1/interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/informers/externalversions/ton/v1alpha1/line.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/listers/ton/v1alpha1/expansion_generated.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/client/listers/ton/v1alpha1/expansion_generated.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/client/listers/ton/v1alpha1/line.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/reconciler/line/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/reconciler/flow/controller.go" afterDir="false" />
-    </list>
+    <list default="true" id="60867704-f1b6-44fc-a2e0-6703fc4338cb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmd/flow/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="261">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
                 <element signature="e#14#268#0" expanded="true" />
               </folding>
@@ -59,10 +37,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pkg/reconciler/flow/controller.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+            <state relative-caret-position="312">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
-                <element signature="e#14#504#0" expanded="true" />
+                <element signature="e#14#405#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -296,9 +274,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26979" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26979" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -311,7 +288,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3847242" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3847242" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -580,16 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/reconciler/flow/controller.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding>
-            <element signature="e#14#504#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/apis/ton/v1alpha1/register.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -611,10 +578,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/reconciler/flow/controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cmd/flow/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="261">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
             <element signature="e#14#268#0" expanded="true" />
           </folding>
