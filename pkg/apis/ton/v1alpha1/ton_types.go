@@ -3,21 +3,25 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
+type FlowStatus struct {
+
+}
+
 // +genclient
-// +genclient:noStatus
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-type Line struct {
+type Flow struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              LineSpec `json:"spec"`
+	Spec              FlowSpec `json:"spec"`
+	Status            FlowStatus `json:"status,omitempty"`
 }
 
-type LineSpec struct {
-	Jobs     []Jog `json:"jobs"`
+type FlowSpec struct {
+	Tasks     []Task `json:"Tasks"`
 }
 
-type Jog struct {
+type Task struct {
 	Name    string `json:"name"`
 	Commond string `json:"commond"`
 	Image  string `json:"image"`
@@ -26,10 +30,13 @@ type Jog struct {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// TonList is a list of Ton resources
-type LineList struct {
+// FlowList is a list of Ton resources
+type FlowList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata"`
 
-	Items []Line `json:"items"`
+	Items []Flow `json:"items"`
+}
+func init() {
+	SchemeBuilder.Register(&Flow{}, &FlowList{})
 }

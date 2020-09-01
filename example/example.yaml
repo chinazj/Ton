@@ -1,0 +1,7 @@
+apiVersion: ton.k8s.io/v1alpha1
+kind: Flow
+metadata:
+  labels:
+    kubesphere.io/workspace: muti-cluster-ws
+  name: example
+spec: {}

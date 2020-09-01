@@ -18,10 +18,10 @@ limitations under the License.
 
 package v1alpha1
 
-// LineListerExpansion allows custom methods to be added to
-// LineLister.
-type LineListerExpansion interface{}
+// FlowListerExpansion allows custom methods to be added to
+// FlowLister.
+type FlowListerExpansion interface{}
 
-// LineNamespaceListerExpansion allows custom methods to be added to
-// LineNamespaceLister.
-type LineNamespaceListerExpansion interface{}
+// FlowNamespaceListerExpansion allows custom methods to be added to
+// FlowNamespaceLister.
+type FlowNamespaceListerExpansion interface{}

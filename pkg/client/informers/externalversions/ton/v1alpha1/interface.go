@@ -24,8 +24,8 @@ import (
 
 // Interface provides access to all the informers in this group version.
 type Interface interface {
-	// Lines returns a LineInformer.
-	Lines() LineInformer
+	// Flows returns a FlowInformer.
+	Flows() FlowInformer
 }
 
 type version struct {
@@ -39,7 +39,7 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 	return &version{factory: f, namespace: namespace, tweakListOptions: tweakListOptions}
 }
 
-// Lines returns a LineInformer.
-func (v *version) Lines() LineInformer {
-	return &lineInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+// Flows returns a FlowInformer.
+func (v *version) Flows() FlowInformer {
+	return &flowInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }

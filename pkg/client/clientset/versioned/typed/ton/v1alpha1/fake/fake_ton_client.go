@@ -29,8 +29,8 @@ type FakeTonV1alpha1 struct {
 	*testing.Fake
 }
 
-func (c *FakeTonV1alpha1) Lines(namespace string) v1alpha1.LineInterface {
-	return &FakeLines{c, namespace}
+func (c *FakeTonV1alpha1) Flows(namespace string) v1alpha1.FlowInterface {
+	return &FakeFlows{c, namespace}
 }
 
 // RESTClient returns a RESTClient that is used to communicate

@@ -27,7 +27,7 @@ import (
 
 type TonV1alpha1Interface interface {
 	RESTClient() rest.Interface
-	LinesGetter
+	FlowsGetter
 }
 
 // TonV1alpha1Client is used to interact with features provided by the ton.k8s.io group.
@@ -35,8 +35,8 @@ type TonV1alpha1Client struct {
 	restClient rest.Interface
 }
 
-func (c *TonV1alpha1Client) Lines(namespace string) LineInterface {
-	return newLines(c, namespace)
+func (c *TonV1alpha1Client) Flows(namespace string) FlowInterface {
+	return newFlows(c, namespace)
 }
 
 // NewForConfig creates a new TonV1alpha1Client for the given config.
