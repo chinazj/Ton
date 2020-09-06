@@ -6,16 +6,18 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client/config"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/manager/signals"
+	"ton/cmd/flow/command"
 	flowScheme "ton/pkg/apis/ton/v1alpha1"
 	"ton/pkg/reconciler/flow"
 )
 
 var (
-	//kubeconfig                = flag.String("kubeconfig", "", "kubeconfig")
+
 )
 
 func main(){
-	//flag.Parse()
+	c := command.NewCommond()
+	c.Parse()
 
 	mgr, err := manager.New(config.GetConfigOrDie(), manager.Options{})
 	if err != nil {
@@ -26,6 +28,7 @@ func main(){
 	if err != nil {
 		fmt.Print(err)
 	}
+
 	// add more controller
 	err = flow.NewControllerManagerBy(mgr)
 	if err != nil {

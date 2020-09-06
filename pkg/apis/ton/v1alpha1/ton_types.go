@@ -1,6 +1,8 @@
 package v1alpha1
+
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	resourcev1alpha1 "github.com/tektoncd/pipeline/pkg/apis/resource/v1alpha1"
 )
 
 type FlowStatus struct {
@@ -18,14 +20,22 @@ type Flow struct {
 }
 
 type FlowSpec struct {
-	Tasks     []Task `json:"Tasks"`
+	Resources []Resources `json:"resources"`
+	Params    []resourcev1alpha1.ResourceParam `json:"params"`
+	Tasks     []Task `json:"tasks"`
 }
+
+type Resources struct {
+	Name          string `json:"name"`
+	ResourcesType string `json:"type"`
+	Params        []resourcev1alpha1.ResourceParam `json:"params"`
+}
+
 
 type Task struct {
 	Name    string `json:"name"`
 	Commond string `json:"commond"`
 	Image  string `json:"image"`
-	ServiceAccountName string `json:"serviceaccountname"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

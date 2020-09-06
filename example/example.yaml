@@ -4,4 +4,30 @@ metadata:
   labels:
     kubesphere.io/workspace: muti-cluster-ws
   name: example
-spec: {}
+spec:
+  resources:
+    - name: git-resources
+      type: git
+      params:
+        - name: url
+          value: https://github.com/tektoncd/pipeline
+        - name: revision
+          value: master
+    - name: docker-resources
+      type: docker
+      params:
+        - name: url
+          value: https://docker.io
+  params:
+    - name: go-build-path
+      value: /workspace/bin/
+  tasks:
+    - name: "Test"
+      commond: "go test"
+    - name: "git-pull"
+      commond: "go build"
+      args:
+      - -o
+      - $(go-build-path)
+    - name: "git-push"
+    - name: "deploy"
